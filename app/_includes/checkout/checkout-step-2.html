@@ -1,0 +1,221 @@
+<div class="checkout-block">
+  <div class="checkout-block__steps">
+    <div class="checkout-block__title">Оформление заказа</div>
+    <!-- FIRST STEP IS DONE -->
+    <div class="checkout-block__step checkout-block__step-1 done">
+      <div class="checkout-block__step-title">
+        <span>1</span> Личные данные
+        <a href="#" class="checkout-block__step-edit">Редактировать</a>
+      </div>
+      <div class="checkout-block__step-content"></div>
+    </div>
+    <!-- FIRSR STEP END -->
+
+    <!-- SECOND STEP DISABLED -->
+    <div class="checkout-block__step checkout-block__step-2">
+      <div class="checkout-block__step-title">
+        <span>2</span> Выбор способов доставки и оплаты
+      </div>
+      <div class="checkout-block__step-content">
+        <form class="checkout-block__form" action="#">
+          
+          <div class="delivery-block">
+            <div class="radio-block__title">Доставка</div>
+            
+            <div class="form-block">
+              <select name="region" class="search-select" data-search="Поиск по области" data-error="Ничего не найдено">
+                <option selected disabled value="">-- Выберите область --</option>
+                <option value="">Харьковская область</option>
+                <option value="">Киевская область</option>
+              </select>
+            </div>
+
+            <div class="form-block">
+              <select name="city" class="search-select" data-search="Поиск по городу" data-error="Ничего не найдено">
+                <option selected disabled value="">-- Выберите город --</option>
+                <option value="">Харьков</option>
+                <option value="">Киев</option>
+              </select>
+            </div>
+
+            <div class="radio-block__box">
+              <div class="radio-block__subtitle">Выберите способ доставки:</div>
+              <div class="radio-block__item">
+                <div class="radio-block">
+                  <label>
+                    <input type="radio" name="delivery" value="">
+                    <span>Самовывоз</span>
+                  </label>
+                </div>
+                <div class="delivery-block__content" style="display: none">
+                  <div class="form-block">
+                    <select name="city_3" id="city_3">
+                      <option selected disabled value="">Город</option>
+                      <option value="">Харьков</option>
+                      <option value="">Киев</option>
+                    </select>
+                  </div>
+                  <div class="form-block">
+                    <select name="shop" id="shop">
+                      <option selected disabled value="">Магазин</option>
+                      <option value="">Харьков</option>
+                      <option value="">Киев</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="radio-block__item">
+                <div class="radio-block">
+                  <label>
+                    <input type="radio" name="delivery" value="">
+                    <span>На отделение «Новой Почты»</span>
+                  </label>
+                </div>
+                <div class="delivery-block__content" style="display: none">
+                  <div class="form-block">
+                    <select name="region" id="region">
+                      <option selected disabled value="">Область</option>
+                      <option value="">Харьковcкая обл.</option>
+                      <option value="">Киевская обл.</option>
+                    </select>
+                  </div>
+                  <div class="form-block">
+                    <select name="city" id="city">
+                      <option selected disabled value="">Город</option>
+                      <option value="">Харьков</option>
+                      <option value="">Лозовая</option>
+                      <option value="">Изюм</option>
+                    </select>
+                  </div>
+                  <div class="form-block">
+                    <select name="department" id="department">
+                      <option value="">Нова пошта №34, вулиця Різдвяна, 14, Харків</option>
+                      <option value="">Нова пошта №33, вулиця Різдвяна, 15, Харків</option>
+                      <option value="">Нова пошта №32, вулиця Різдвяна, 16, Харків</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="radio-block__item">
+                <div class="radio-block">
+                  <label>
+                    <input type="radio" name="delivery" value="">
+                    <span>Адресная доставка по Украине</span>
+                  </label>
+                </div>
+                <div class="delivery-block__content" style="display: none">
+                  <div class="form-block">
+                    <select name="region" id="region">
+                      <option selected disabled value="">Область</option>
+                      <option value="">Харьковcкая обл.</option>
+                      <option value="">Киевская обл.</option>
+                    </select>
+                  </div>
+                  <div class="form-block">
+                    <select name="city" id="city">
+                      <option selected disabled value="">Город</option>
+                      <option value="">Харьков</option>
+                      <option value="">Лозовая</option>
+                      <option value="">Изюм</option>
+                    </select>
+                  </div>
+                  <div class="form-block">
+                    <input class="main-input" type="text" name="street" value="">
+                    <label class="form-label">Улица</label>
+                  </div>
+                  <div class="form-block">
+                    <input class="main-input" type="text" name="house" value="">
+                    <label class="form-label">Дом</label>
+                  </div>
+                  <div class="form-block">
+                    <input class="main-input" type="text" name="apartment" value="">
+                    <label class="form-label">Квартира</label>
+                  </div>
+                </div>
+              </div>
+              <div class="radio-block__item">
+                <div class="radio-block">
+                  <label>
+                    <input type="radio" name="delivery" value="">
+                    <span>Курьер (по Харькову)</span>
+                  </label>
+                </div>
+                <div class="delivery-block__content" style="display: none">
+                  <div class="form-block">
+                    <select name="region" id="region">
+                      <option selected disabled value="">Область</option>
+                      <option value="">Харьковcкая обл.</option>
+                      <option value="">Киевская обл.</option>
+                    </select>
+                  </div>
+                  <div class="form-block">
+                    <select name="city" id="city">
+                      <option selected disabled value="">Город</option>
+                      <option value="">Харьков</option>
+                      <option value="">Лозовая</option>
+                      <option value="">Изюм</option>
+                    </select>
+                  </div>
+                  <div class="form-block">
+                    <input class="main-input" type="text" name="street" value="">
+                    <label class="form-label">Улица</label>
+                  </div>
+                  <div class="form-block">
+                    <input class="main-input" type="text" name="house" value="">
+                    <label class="form-label">Дом</label>
+                  </div>
+                  <div class="form-block">
+                    <input class="main-input" type="text" name="apartment" value="">
+                    <label class="form-label">Квартира</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="payment-block">
+            <div class="radio-block__title">Оплата</div>
+            <div class="radio-block__box">
+              <div class="radio-block__subtitle">Выберите тип оплаты:</div>
+              
+              <div class="radio-block">
+                <label>
+                  <input type="radio" name="payment" value="">
+                  <span>Оплата при доставке</span>
+                </label>
+              </div>
+              <div class="radio-block">
+                <label>
+                  <input type="radio" name="payment" value="">
+                  <span>Кредитная карта VISA/MasterCard</span>
+                </label>
+              </div>
+              <div class="radio-block">
+                <label>
+                  <input type="radio" name="payment" value="">
+                  <span>Оплата по безналичному расчету</span>
+                </label>
+              </div>
+              <div class="radio-block">
+                <label>
+                  <input type="radio" name="payment" value="">
+                  <span>Перевод на карту Приват Банка</span>
+                </label>
+              </div>
+              
+            </div>
+          </div>
+          
+          <button style="max-width: 100%;" type="submit" class="checkout-button">Заказ подтверждаю</button>
+        </form>
+      </div>
+    </div>
+    <!-- SECOND STEP END -->
+  </div>
+  <div class="basket-block__wrap">
+    <div class="basket-block__top">Ваш заказ: <span>5 товаров</span></div>
+    <!-- BASKET -->
+    {% include 'checkout/checkout-basket.html' %}
+    <!-- BASKET END -->
+  </div>
+</div>

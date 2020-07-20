@@ -1,0 +1,286 @@
+<div class="checkout">
+  <div class="checkout__title">Оформление заказа</div>
+  <a href="#" class="checkout-block__link">У меняесть аккаунт</a>
+
+  <form action="#" class="checkout-singlestep">
+    <div class="checkout-block__form">
+      <div class="form-block">
+        <input class="main-input" type="text" name="first_name">
+        <label class="form-label">Имя</label>
+      </div>
+      <div class="form-block">
+        <input class="main-input" type="text" name="last_name">
+        <label class="form-label">Фамилия</label>
+      </div>
+      <div class="form-block">
+        <input class="main-input" type="tel" name="phone">
+        <label class="form-label">Телефон</label>
+      </div>
+      <div class="form-block">
+        <input class="main-input" type="email" name="email">
+        <label class="form-label">Email</label>
+      </div>
+    </div>
+
+    <div class="delivery-block">
+      <div class="radio-block__title">Доставка</div>
+      <div class="form-block">
+        <select name="region" class="search-select" data-search="Поиск по области" data-error="Ничего не найдено">
+          <option selected disabled value="">-- Выберите область --</option>
+          <option value="">Харьковская область</option>
+          <option value="">Киевская область</option>
+        </select>
+      </div>
+
+      <div class="form-block">
+        <select name="city" class="search-select" data-search="Поиск по городу" data-error="Ничего не найдено">
+          <option selected disabled value="">-- Выберите город --</option>
+          <option value="">Харьков</option>
+          <option value="">Киев</option>
+        </select>
+      </div>
+      <!-- if disabled (region no selected) = add class "disabled" to "radio-block__box" -->
+      <div class="radio-block__box">
+        <div class="radio-block__subtitle">Выберите способ доставки:</div>
+        <div class="radio-block__item">
+          <div class="radio-block">
+            <label>
+              <input type="radio" name="delivery" value="">
+              <span>Самовывоз</span>
+            </label>
+          </div>
+          <div class="delivery-block__content" style="display: none">
+            <div class="form-block">
+              <select name="city_3" id="city_3">
+                <option selected disabled value="">Город</option>
+                <option value="">Харьков</option>
+                <option value="">Киев</option>
+              </select>
+            </div>
+            <div class="form-block">
+              <select name="shop" id="shop">
+                <option selected disabled value="">Магазин</option>
+                <option value="">Харьков</option>
+                <option value="">Киев</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="radio-block__item">
+          <div class="radio-block">
+            <label>
+              <input type="radio" name="delivery" value="">
+              <span>На отделение «Новой Почты»</span>
+            </label>
+          </div>
+          <div class="delivery-block__content" style="display: none">
+            <div class="form-block">
+              <select name="region" id="region">
+                <option selected disabled value="">Область</option>
+                <option value="">Харьковcкая обл.</option>
+                <option value="">Киевская обл.</option>
+              </select>
+            </div>
+            <div class="form-block">
+              <select name="city" id="city">
+                <option selected disabled value="">Город</option>
+                <option value="">Харьков</option>
+                <option value="">Лозовая</option>
+                <option value="">Изюм</option>
+              </select>
+            </div>
+            <div class="form-block">
+              <select name="department" id="department">
+                <option value="">Нова пошта №34, вулиця Різдвяна, 14, Харків</option>
+                <option value="">Нова пошта №33, вулиця Різдвяна, 15, Харків</option>
+                <option value="">Нова пошта №32, вулиця Різдвяна, 16, Харків</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="radio-block__item">
+          <div class="radio-block">
+            <label>
+              <input type="radio" name="delivery" value="">
+              <span>Адресная доставка по Украине</span>
+            </label>
+          </div>
+          <div class="delivery-block__content" style="display: none">
+            <div class="form-block">
+              <select name="region" id="region">
+                <option selected disabled value="">Область</option>
+                <option value="">Харьковcкая обл.</option>
+                <option value="">Киевская обл.</option>
+              </select>
+            </div>
+            <div class="form-block">
+              <select name="city" id="city">
+                <option selected disabled value="">Город</option>
+                <option value="">Харьков</option>
+                <option value="">Лозовая</option>
+                <option value="">Изюм</option>
+              </select>
+            </div>
+            <div class="form-block">
+              <input class="main-input" type="text" name="street" value="">
+              <label class="form-label">Улица</label>
+            </div>
+            <div class="form-block">
+              <input class="main-input" type="text" name="house" value="">
+              <label class="form-label">Дом</label>
+            </div>
+            <div class="form-block">
+              <input class="main-input" type="text" name="apartment" value="">
+              <label class="form-label">Квартира</label>
+            </div>
+          </div>
+        </div>
+        <div class="radio-block__item">
+          <div class="radio-block">
+            <label>
+              <input type="radio" name="delivery" value="">
+              <span>Курьер (по Харькову)</span>
+            </label>
+          </div>
+          <div class="delivery-block__content" style="display: none">
+            <div class="form-block">
+              <select name="region" id="region">
+                <option selected disabled value="">Область</option>
+                <option value="">Харьковcкая обл.</option>
+                <option value="">Киевская обл.</option>
+              </select>
+            </div>
+            <div class="form-block">
+              <select name="city" id="city">
+                <option selected disabled value="">Город</option>
+                <option value="">Харьков</option>
+                <option value="">Лозовая</option>
+                <option value="">Изюм</option>
+              </select>
+            </div>
+            <div class="form-block">
+              <input class="main-input" type="text" name="street" value="">
+              <label class="form-label">Улица</label>
+            </div>
+            <div class="form-block">
+              <input class="main-input" type="text" name="house" value="">
+              <label class="form-label">Дом</label>
+            </div>
+            <div class="form-block">
+              <input class="main-input" type="text" name="apartment" value="">
+              <label class="form-label">Квартира</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- disabled end -->
+    </div>
+
+    <div class="payment-block">
+      <div class="radio-block__title">Оплата</div>
+      <!-- if disabled (region no selected) = add class "disabled" to "radio-block__box" -->
+      <div class="radio-block__box">
+        <div class="radio-block__subtitle">Выберите тип оплаты:</div>
+        <div class="radio-block">
+          <label>
+            <input type="radio" name="payment" value="">
+            <span>Оплата при доставке</span>
+          </label>
+        </div>
+        <div class="radio-block">
+          <label>
+            <input type="radio" name="payment" value="">
+            <span>Кредитная карта VISA/MasterCard</span>
+          </label>
+        </div>
+        <div class="radio-block">
+          <label>
+            <input type="radio" name="payment" value="">
+            <span>Оплата по безналичному расчету</span>
+          </label>
+        </div>
+        <div class="radio-block">
+          <label>
+            <input type="radio" name="payment" value="">
+            <span>Перевод на карту Приват Банка</span>
+          </label>
+        </div>
+      </div>
+      <!-- disabled end -->
+    </div>
+
+    <div class="checkout-items">
+      <div class="radio-block__title">Состав заказа</div>
+      <div class="checkout-items__list">
+        <div class="basket-block__item">
+          <div class="basket-block__delete">x</div>
+          <div class="basket-block__image">
+            <img src="data/product-item-1.jpg" width="100" height="80" alt="">
+          </div>
+          <div class="basket-block__info">
+            <div class="basket-block__title">
+              <a href="#">Очень длинное название товара</a>
+            </div>
+            <div class="basket-block__article">Синий / 44 / Арт: 23534644</div>
+            <div class="basket-block__options">
+              <div class="basket-block__quantity">
+                <span>Кол-во:</span>
+                <div class="product-quantity">
+                  <button class="product-quantity__button product-quantity__minus"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="1" viewBox="0 0 7 1"><rect  class="cls-1" width="7" height="1"/></svg></button>
+                  <input class="product-quantity__input" type="number" name="product-quantity" value="1" min="0" max="999" readonly>
+                  <button class="product-quantity__button product-quantity__plus"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7"><path d="M1308,350h7v1h-7v-1Zm3-3h1v7h-1v-7Z" transform="translate(-1308 -347)"/></svg></button>
+                </div>
+              </div>
+              <div class="basket-block__price-box">
+                <span>Сумма:</span>
+                <div class="basket-block__current-price">3404.00 грн</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="basket-block__item">
+          <div class="basket-block__delete">x</div>
+          <div class="basket-block__image">
+            <img src="data/product-item-1.jpg" width="100" height="80" alt="">
+          </div>
+          <div class="basket-block__info">
+            <div class="basket-block__title">
+              <a href="#">Очень длинное название товара</a>
+            </div>
+            <div class="basket-block__article">Синий / 44 / Арт: 23534644</div>
+            <div class="basket-block__options">
+              <div class="basket-block__quantity">
+                <span>Кол-во:</span>
+                <div class="product-quantity">
+                  <button class="product-quantity__button product-quantity__minus"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="1" viewBox="0 0 7 1"><rect  class="cls-1" width="7" height="1"/></svg></button>
+                  <input class="product-quantity__input" type="number" name="product-quantity" value="1" min="0" max="999" readonly>
+                  <button class="product-quantity__button product-quantity__plus"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7"><path d="M1308,350h7v1h-7v-1Zm3-3h1v7h-1v-7Z" transform="translate(-1308 -347)"/></svg></button>
+                </div>
+              </div>
+              <div class="basket-block__price-box">
+                <span>Сумма:</span>
+                <div class="basket-block__current-price">3404.00 грн</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="basket-block__bottom">
+        <div class="basket-block__promocode">
+          <div class="basket-block__promocode-title">У меня есть Промо-код</div>
+          <div class="basket-block__promocode-form" style="display:none" >
+            <div class="form-block">
+              <input class="basket-block__promocode-input" type="text" name="promocode" value="" placeholder="Введите промо код">
+            </div>
+            <button type="submit" class="basket-block__promocode-button">Применить</button>
+          </div>
+          <div class="basket-block__promocode-result" style="display:none" >Скидка по промокоду: <span>68.00 грн</span></div>
+        </div>
+        <div class="basket-block__total">Итого: <span>6740.00 грн</span></div>
+      </div>
+    </div>
+
+    <button type="submit" class="checkout-button">Заказ подтверждаю</button>
+  </form>
+
+</div>

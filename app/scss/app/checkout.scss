@@ -1,0 +1,554 @@
+// STYLES FOR CHECKOUT STEPS
+.checkout-block {
+  max-width: 930px;
+  width: 100%;
+  margin: 0 auto 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include response(1023px) {
+    padding: 0 15px;
+  }
+  @include response(767px) {
+    flex-direction: column;
+  }
+  &__title {
+    font-weight: bold;
+    line-height: 22px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    margin-bottom: 25px;
+  }
+  &__link {
+    display: table;
+    color: #5180af;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    border-bottom: 1px dotted #5180af;
+    padding-bottom: 2px;
+  }
+  &__steps {
+    max-width: 460px;
+    width: 100%;
+    flex-basis: 460px;
+    min-width: 0;
+    margin-right: 20px;
+    @include response(767px) {
+      flex-basis: auto;
+      margin: 0 auto 30px;
+    }
+  }
+  &__step {
+    margin-bottom: 40px;
+    &.disabled {
+      .checkout-block__step-title {
+        color: rgba(74, 74, 74, 0.2);
+        span {
+          color: #fff;
+          background: #ddd;
+        }
+      }
+    }
+    &.done {
+      max-width: 395px;
+      margin-bottom: 25px;
+      border-bottom: 1px dotted rgba(150, 150, 150, 0.3);
+      .checkout-block__step-title {
+        margin-bottom: 18px;
+        color: #5180af;
+        span {
+          color: #fff;
+          background: #5180af;
+        }
+      }
+    }
+  }
+  &__step-2 {
+    margin-bottom: 0;
+  }
+  &__step-title {
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    span {
+      background: #dce062;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-weight: bold;
+      line-height: 19px;
+      font-size: 14px;
+      color: #fff;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    .main-link {
+      line-height: 21px;
+      margin-left: auto;
+    }
+  }
+  &__form {
+    max-width: 300px;
+  }
+  &__step-edit {
+    display: table;
+    color: #5180af;
+    font-size: 12px;
+    margin: 0 0 0 20px;
+  }
+}
+
+.delivery-block {
+  max-width: 300px;
+  margin-bottom: 54px;
+  > .form-block {
+    margin-bottom: 40px;
+  }
+  &__content {
+    margin-bottom: 24px;
+  }
+}
+
+.payment-block {
+  max-width: 300px;
+  margin-bottom: 55px;
+}
+
+
+// STYLES FOR ONE STEP
+.checkout {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto 80px;
+  @include response(767px) {
+    padding: 0 15px;
+  }
+  &__title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    text-align: center;
+  }
+  .checkout-block__link {
+    text-align: center;
+    margin: 0 auto 32px;
+  }
+  .checkout-block__form {
+    margin: 0 auto 65px;
+  }
+  .delivery-block,
+  .payment-block {
+    margin: 0 auto 70px;
+    .radio-block__title,
+    .radio-block__subtitle {
+      text-align: center;
+    }
+  }
+  .checkout-button {
+    height: 64px;
+    max-width: 100%;
+  }
+}
+
+.checkout-items {
+  width: 100%;
+  .radio-block__title {
+    text-align: center;
+  }
+  &__list {
+    border-bottom: 1px dotted rgba(150, 150, 150, 0.3);
+    .basket-block__item {
+      padding: 30px 60px;
+      @include response(767px) {
+        padding: 30px 10px;
+      }
+    }
+    .basket-block__info {
+      max-width: 340px;
+      width: 100%;
+      flex-basis: 340px;
+    }
+    .basket-block__options {
+      @include response(767px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    .basket-block__quantity {
+      margin: 0;
+      @include response(767px) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+  .basket-block__bottom {
+    max-width: 300px;
+    margin: 0 auto 25px;
+  }
+}
+
+
+// ======================
+// Common custom elements
+// ======================
+
+// button (raplace this for design)
+.checkout-button {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 160px;
+  width: 100%;
+  height: 48px;
+  background: #dce062;
+  border-radius: 5px;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+// inputs with label (raplace this for design)
+.form-label {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  font-size: 14px;
+  color: #9b9b9b;
+  pointer-events: none;
+  background: #fff;
+  padding: 0 8px;
+}
+
+.form-block {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  .form-label {
+    transition: .3s ease-in-out;
+  }
+  input,
+  textarea {
+    &:focus + .form-label {
+      top: -6px;
+      color: #c7c7c7;
+      font-size: 11px;
+    }
+    &.value + .form-label {
+      top: -6px;
+      color: #c7c7c7;
+      font-size: 11px;
+    }
+  }
+}
+
+.main-input {
+  width: 100%;
+  height: 44px;
+  border-radius: 5px;
+  border: 1px solid rgba(184, 184, 184, 0.6);
+  padding: 0 22px;
+  font-size: 14px;
+  color: #000;
+}
+
+// product quantity (raplace this for design)
+.product-quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    svg {
+      width: 10px;
+      height: 10px;
+      fill: #1d1d1b;
+    }
+  }
+  &__input {
+    width: 38px;
+    font-size: 14px;
+    color: #4a4a4a;
+    text-align: center;
+    border: none;
+  }
+}
+
+// Radio button (raplace this for design)
+.radio-block {
+  position: relative;
+  margin-bottom: 22px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &__box {
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    line-height: 19px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+  }
+  &__subtitle {
+    line-height: 19px;
+    font-size: 14px;
+    color: #9b9b9b;
+    margin-bottom: 24px;
+  }
+  label {
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"] + span {
+      font-size: 14px;
+      color: #000;
+      cursor: pointer;
+      margin-left: 45px;
+      &::before {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: block;
+        background: #fff;
+        border: 1px solid rgba(213, 213, 213, 0.6);
+        transition: .3s ease-in-out;
+      }
+      &::after {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #dce062;
+        transform: translateY(-50%);
+        visibility: hidden;
+        opacity: 0;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+      }
+    }
+    input[type="radio"]:checked + span::after {
+      visibility: visible;
+      opacity: 1;
+      overflow: visible;
+    }  
+  }
+}
+
+// CHECKOUT BASKET BLOCK (raplace this for design)
+.basket-block {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  &__wrap {
+    max-width: 420px;
+    width: 100%;
+    flex-basis: 420px;
+    @include response(767px) {
+      flex-basis: auto;
+      margin: 0 auto;
+    }
+  }
+  &__top {
+    font-weight: bold;
+    line-height: 19px;
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    span {
+      font-weight: 400;
+      color: #9b9b9b;
+    }
+  }
+  &__list {
+    max-height: 318px;
+    overflow-y: auto;
+    border-bottom: 1px dotted rgba(150, 150, 150, 0.3);
+    .mCSB_inside > .mCSB_container {
+      margin-right: 0;
+    }
+  }
+  &__item {
+    padding: 30px 30px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-bottom: 1px dotted rgba(150, 150, 150, 0.3);
+    @include response(767px) {
+      padding: 30px 10px 25px;
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+  &__delete {
+    margin-top: 35px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  &__image {
+    margin-right: 16px;
+  }
+  &__info {
+    max-width: 215px;
+    width: 100%;
+    flex-basis: 215px;
+  }
+  &__title {
+    line-height: 19px;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 8px;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  &__article {
+    font-size: 12px;
+    color: #9b9b9b;
+    margin-bottom: 12px;
+  }
+  &__quantity {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+      font-size: 12px;
+      color: #9b9b9b;
+      margin-right: 10px;
+    }
+  }
+  &__price-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+      font-size: 12px;
+      color: #9b9b9b;
+      margin-right: 10px;
+    }
+  }
+  &__current-price {
+    line-height: 19px;
+    font-size: 14px;
+    color: #4a4a4a;
+  }
+  &__bottom {
+    padding: 18px 30px 20px;
+  }
+  &__promocode {
+    margin-bottom: 30px;
+  }
+  &__promocode-title {
+    height: 44px;
+    max-width: 360px;
+    width: 100%;
+    background: rgba(215, 215, 215, 0.2);
+    border-radius: 5px;
+    color: #9b9b9b;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  &__promocode-form {
+    width: 100%;
+    position: relative;
+  }
+  &__promocode-input {
+    width: 100%;
+    height: 44px;
+    border: none;
+    background: rgba(215, 215, 215, 0.2);
+    border-radius: 5px;
+    padding: 0 95px 0 22px;
+    font-size: 12px;
+    color: #000;
+    &::placeholder {
+      color: #9b9b9b;
+    }
+  }
+  &__promocode-button {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    line-height: 17px;
+    font-size: 12px;
+    color: #5180af;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  &__promocode-result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 17px;
+    font-size: 12px;
+    color: #9b9b9b;
+    span {
+      margin-left: 10px;
+      font-size: 18px;
+      color: #4a4a4a;
+    }
+  }
+  &__total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    color: #9b9b9b;
+    span {
+      font-size: 18px;
+      color: #4a4a4a;
+      margin-left: 12px;
+    }
+  }
+  &__options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

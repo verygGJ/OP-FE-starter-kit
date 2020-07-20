@@ -1,0 +1,56 @@
+<div class="checkout-block">
+  <div class="checkout-block__steps">
+    <div class="checkout-block__title">Оформление заказа</div>
+    <a href="#" class="checkout-block__link">У меня есть аккаунт</a>
+    <!-- FIRST STEP IS ACTIVE -->
+    <div class="checkout-block__step checkout-block__step-1">
+      
+      <div class="checkout-block__step-title">
+        <span>1</span> Личные данные
+      </div>
+
+      <div class="checkout-block__step-content">
+        <form class="checkout-block__form">
+          <!-- FIRST STEP INPUST -->
+          <div class="form-block">
+            <input class="main-input" type="text" name="first_name">
+            <label class="form-label">Имя</label>
+          </div>
+          <div class="form-block">
+            <input class="main-input" type="text" name="last_name">
+            <label class="form-label">Фамилия</label>
+          </div>
+          <div class="form-block">
+            <input class="main-input" type="tel" name="phone">
+            <label class="form-label">Телефон</label>
+          </div>
+          <div class="form-block">
+            <input class="main-input" type="email" name="email">
+            <label class="form-label">Email</label>
+          </div>
+          <!-- FIRST STEP INPUST END -->
+          <button type="button" class="checkout-button">Продолжить</button>
+        </form>
+      </div>
+
+    </div>
+    <!-- FIRSR STEP END -->
+
+    <!-- SECOND STEP DISABLED -->
+    <div class="checkout-block__step checkout-block__step-2 disabled">
+      <div class="checkout-block__step-title">
+        <span>2</span> Выбор способов доставки и оплаты
+      </div>
+      <div class="checkout-block__step-content"></div>
+    </div>
+    <!-- SECOND STEP END -->
+  </div>
+  <div class="basket-block__wrap">
+    <div class="basket-block__top">
+      Ваш заказ: <span>5 товаров</span>
+    </div>
+     <!-- BASKET -->
+     {% include 'checkout/checkout-basket.html' %}
+    <!-- BASKET END -->
+  </div>
+</div>
